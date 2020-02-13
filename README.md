@@ -6,15 +6,25 @@
   <img src="https://github.com/manekinekko/github-action-angular-hexa/raw/master/src/assets/angular-hexa-deploy-to-azure.png"/>
 </p>
 
+
+### Important
+
+#### Install the Hexa.run CLI
+
+Inside your Angular project make sure to install the Hexa.run CLI as a prod dependency `npm i -S @manekinekko/hexa` as you can see from the [package.json](https://github.com/manekinekko/github-action-angular-hexa/blob/master/package.json#L29) of this project. 
+
+#### Add your NPM aliases (optional)
+The `npm run heax:...` commands mentioned below are just aliases to the Hexa cli ( [see the package.json example file](https://github.com/manekinekko/github-action-angular-hexa/blob/master/package.json#L11-L17) ). You will have to add them to your own `package.json` or use your own aliases.
+
 ### On your local machine
 
-> IMPORTANT: the following `npm run heax:...` commands are just aliases to the Hexa cli ( [see the package.json example file](https://github.com/manekinekko/github-action-angular-hexa/blob/master/package.json#L11-L17) ). You will have to add them to your own `package.json` or use your own aliases.
-
-- Run `npm run hexa:login` to log into your Azure account.
-- Run `npm run hexa:init` and follow Hexa's instructions. This will create a `hexa.json`.
+- Install the Hexa.run CLI: `npm i -S @manekinekko/hexa`
+- Log into your Azure account: `npm run hexa:login`
+- Run the Hexa CLI and follow the instructions: `npm run hexa:init`.
   - NOTE: the hosting public folder should point to `./dist/angular-app-name/`
+- Hexa will create a `hexa.json` (you need to version it to git).
 - Commit your changes.
-- Run `npm run hexa:ci`, this will print the following credentials:
+- Run `npm run hexa:ci`, and write down the following credentials (you will need them later):
 ```
 {
   appId: 'xx4362xx-aaxx-40xx-8bxx-xx6ea0c351xx',
