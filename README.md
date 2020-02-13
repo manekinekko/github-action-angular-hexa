@@ -2,6 +2,10 @@
 
 ## Deploy Angular to Azure with [Hexa.run](https://hexa.run)
 
+<p align="center">
+  <img src="https://github.com/manekinekko/github-action-angular-hexa/raw/master/src/assets/angular-hexa-deploy-to-azure.png"/>
+</p>
+
 ### On your local machine
 
 - Run `npm run hexa:login` to log into your Azure account.
