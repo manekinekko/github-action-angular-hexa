@@ -1,0 +1,33 @@
+name: Deploy to Azure with Hexa.run
+
+on:
+  push:
+    branches:
+    - master
+    - release/*
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: npm install
+      run: |
+        npm install
+    - name: npm build, and deploy
+      env:
+        AZURE_SERVICE_PRINCIPAL_ID: ${{ secrets.AZURE_SERVICE_PRINCIPAL_ID }}
+        AZURE_SERVICE_PRINCIPAL_PASSWORD: ${{ secrets.AZURE_SERVICE_PRINCIPAL_PASSWORD }}
+        AZURE_SERVICE_PRINCIPAL_TENANT: ${{ secrets.AZURE_SERVICE_PRINCIPAL_TENANT }}
+      run: |
+        npm run hexa:deploy

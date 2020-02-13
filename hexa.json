@@ -1,0 +1,13 @@
+{
+  "project": {
+    "location": "westeurope",
+    "name": "angularhexa"
+  },
+  "storage": {
+    "location": "westeurope",
+    "name": "angularhexa81052"
+  },
+  "hosting": {
+    "folder": "./dist/angular-hexa"
+  }
+}
