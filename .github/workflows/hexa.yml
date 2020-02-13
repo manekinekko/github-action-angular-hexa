@@ -30,5 +30,6 @@ jobs:
         AZURE_SERVICE_PRINCIPAL_PASSWORD: ${{ secrets.AZURE_SERVICE_PRINCIPAL_PASSWORD }}
         AZURE_SERVICE_PRINCIPAL_TENANT: ${{ secrets.AZURE_SERVICE_PRINCIPAL_TENANT }}
       run: |
+        npm run hexa:login
         npm run build -- --prod
         npm run hexa:deploy
