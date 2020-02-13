@@ -8,6 +8,8 @@
 
 ### On your local machine
 
+> IMPORTANT: the following `npm run heax:...` commands are just aliases to the Hexa cli ( [see the package.json example file](https://github.com/manekinekko/github-action-angular-hexa/blob/master/package.json#L11-L17) ). You will have to add them to your own `package.json` or use your own aliases.
+
 - Run `npm run hexa:login` to log into your Azure account.
 - Run `npm run hexa:init` and follow Hexa's instructions. This will create a `hexa.json`.
   - NOTE: the hosting public folder should point to `./dist/angular-app-name/`
