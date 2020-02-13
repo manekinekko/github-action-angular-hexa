@@ -13,6 +13,7 @@
     "hexa:init": "hexa init --just=hosting",
     "hexa:ci": "hexa ci",
     "--step-2--": "on CI",
+    "hexa:login": "hexa login",
     "hexa:deploy": "hexa deploy"
   },
   "private": true,
