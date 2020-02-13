@@ -1,11 +1,12 @@
 # ![Deploy to Azure with Hexa.run](https://github.com/manekinekko/github-action-angular-hexa/workflows/Deploy%20to%20Azure%20with%20Hexa.run/badge.svg)
 
-## Deploy to Azure
+## Deploy Angular to Azure with [Hexa.run](https://hexa.run)
 
 ### On your local machine
 
 - Run `npm run hexa:login` to log into your Azure account.
-- Run `npm run hexa:init` and follow Hexa's instructions. This will create a `hexa.json`
+- Run `npm run hexa:init` and follow Hexa's instructions. This will create a `hexa.json`.
+  - NOTE: the hosting public folder should point to `./dist/angular-app-name/`
 - Commit your changes.
 - Run `npm run hexa:ci`, this will print the following credentials:
 ```
